@@ -1,0 +1,384 @@
+<html lang="en" class="hydrated">
+
+<head>
+    <!-- vs "ec " LLADOS, CESAR AGUSTIN -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Museo del Ejercito</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/scss/styles.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="image/x-icon" href="./multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+    <!-- SEO -->
+    <meta name="description"
+        content="El edificio de esta direccion fue inaugurado en el año 1881 como la casa de la moneda,su construccion habia sido aprobada en 1875, a partir de la ley 733 por decreto Nº 2186 el 4 de septiembre de 1979. Es declarado como monumento Historico Nacional">
+    <meta name="keywords"
+        content="Patrimonio documental Historico, Archivo Historico, Fondo Documental, Gestion Administracion Archivos Historicos, Servicio Historico">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        #popup {
+            display: none;
+        }
+
+        /* Imagen base */
+        .map-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Tooltip */
+        #tooltip {
+            position: absolute;
+            display: none;
+            padding: 6px;
+            background: #fff;
+            border: 1px solid #333;
+            border-radius: 6px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #tooltip img {
+            max-width: 200px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #tooltip p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showDate = new Date("2024-08-17");
+
+            const hideDate = new Date("2024-11-10");
+            const currentDate = new Date();
+            if (currentDate >= showDate && currentDate <= hideDate) {
+                const popup = document.getElementById("popup");
+                popup.style.display = "block";
+            }
+
+            const closeButton = document.getElementById("closeButton");
+            closeButton.addEventListener("click", function () {
+                const popup = document.getElementById("popup");
+                popup.style.display = "none";
+            });
+        });
+    </script>
+
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+    <div id="popup" class="popup">
+        <img src="./multimedia/folleto.png" alt="Imagen Popup">
+        <button id="closeButton" class="close-button btn-danger">Cerrar</button>
+    </div>
+    <div id="navbar"></div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./multimedia/carousel/1.webp" class="d-block w-100" alt="Imagen">
+
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/carousel/2.webp" class="d-block w-100" alt="Imagen">
+
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/carousel/3.webp" class="d-block w-100" alt="Imagen">
+
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/carousel/4.webp" class="d-block w-100" alt="Imagen">
+
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/carousel/5.webp" class="d-block w-100" alt="Imagen">
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <main class="col-9">
+        <h2>El Museo Histórico del Ejército Argentino</h2>
+        <h3>te invita a conocer nuestra historia</h3> <br><br>
+        <p> <br><br>
+
+            Con su visita podrá conocer nuestros comienzos, próceres, armamento de distintas épocas, uniformes,
+            vehículos militares, documentos oficiales, fotografías, obras de arte y objetos de gran valor patrimonial.
+            <br><br>
+
+            Va a poder disfrutar con un guía que explicará cada una de las exposiciones, las cuales están cuidadosamente
+            conservadas y contextualizadas, para poder ofrecer una experiencia inmersiva en la cual va a poder entender
+            cómo fue sucediendo la evolución de la estrategia y la tecnología, cómo transcurrieron los hechos que
+            forjaron
+            nuestra historia, tanto como institución como nación. <br><br>
+
+            Nuestra institución también revelará su desempeño en el plano social, mediante tareas humanitarias tanto
+            locales como internacionales y charlas educativas para todas las edades.
+
+        </p>
+        <br><br><br>
+        <h3>VENÍ A VISITARNOS</h3><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <p>Te esperamos en el Museo Histórico del Ejército Argentino, ubicado en Ciudadela, con entrada
+                        libre. <br><br>
+                        Sumate a este recorrido único por la historia nacional, pensado para toda la familia, escuelas,
+                        instituciones y público en general. <br><br>
+                        <b>¡Descubrí el legado, el honor y la tradición del Ejército Argentino!</b>
+                    </p>
+                </div>
+                <div class="col-sm flyer"><img src="./multimedia/ven.webp" alt="FLYER" width="300" height="200">
+                </div>
+            </div>
+        </div>
+        <!-- FALTA EL QUE HACEMOS Y CUANDO  -->
+        <br><br>
+       <!--  <h2>CONOCE NUESTRAS SALAS </h2>
+        <div class="map-container">
+            <img src="./multimedia/1810.jpeg" alt="Mapa de 1810" usemap="#mapa" class="mapa">
+
+            <map name="mapa">
+                <area shape="rect" coords="240,255,280,281" alt="Fuerte Real Audencia" data-img="./multimedia/1810.jpeg"
+                    data-text="Fuerte Real Audencia y Reales Cajas">
+
+                <area shape="rect" coords="280,200,305,224" alt="Catedral" data-img="catedral.jpg"
+                    data-text="3-Catedral, 4-Casa de Miguel de Azcuénaga, 42-Casa de Melgarejo y Botica de D. Nicolás R.">
+
+                <area shape="rect" coords="250,175,280,199" alt="Cabildo" data-img="cabildo.jpg"
+                    data-text="5-Cabildo, 6-Altos de Uriste y Siglos, 8-Casa de Gandazabal">
+
+            </map>
+        </div>
+
+        <div id="tooltip"></div>
+
+        <script>
+            const tooltip = document.getElementById("tooltip");
+
+            document.querySelectorAll("area").forEach(area => {
+                area.addEventListener("mouseover", () => {
+                    const img = area.dataset.img;
+                    const text = area.dataset.text;
+                    tooltip.innerHTML = (img ? `<img src="${img}">` : "") +
+                        (text ? `<p>${text}</p>` : "");
+                    tooltip.style.display = "block";
+                });
+
+                area.addEventListener("mousemove", (e) => {
+                    tooltip.style.left = (e.pageX + 15) + "px";
+                    tooltip.style.top = (e.pageY + 15) + "px";
+                });
+
+                area.addEventListener("mouseout", () => {
+                    tooltip.style.display = "none";
+                });
+            });
+        </script> -->
+        <!--  <map name="mapa">
+            <area shape="rect" coords="240,255,280,281" title="Fuerte Real Audencia y Reales Cajas" 
+                alt="" >
+            <area shape="rect" coords="" title=""  alt="">
+            <area shape="rect" coords="280,200,305,224" class="areas"title="3-Catedral
+4-Casa de Miguel de Azcuenaga
+42-Casa de Melgarejo y Botica de D.Nicolas R."  alt="">
+            <area shape="rect" coords="250,175,280,199" title="5-Cabildo
+6-Altos de Uriste y Siglos
+8-Casa de Gandazabal"  alt="">
+            <area shape="rect" coords="280,175,305,200" title="Casa de Gaspar de Santa Coloma" 
+                alt="">
+            <area shape="rect" coords="280,85,305,110" title="9-Casa de Mujeres
+10-Casa de Nicolas Rodriguez Peña
+11-Casa de Juan Jose Castelli
+12-Iglesia de San Miguel y Asilo de Huerfanas"  alt="">
+            <area shape="rect" coords="250,55,280,84" title="13-Presidio"  alt="">
+            <area shape="rect" coords="140,5,180,30" title="14-Iglesia de Montserrat"  alt="">
+            <area shape="rect" coords="150,35,180,60" title="15-Plaza de Montserrat"  alt="">
+            <area shape="rect" coords="185,90,210,115" title="16-Iglesia de San Juan y Monasterio de las Clarisas"
+                 alt="">
+            <area shape="rect" coords="185,145,210,168" title="17-Plaza Montserrat"  alt="">
+            <area shape="rect" coords="140,145,180,170" title="18-Cuartel de Rancheria, Casa de la Virreina Viuda"
+                 alt="">
+            <area shape="rect" coords="185,170,210,198" title="19-Casa de Oruro
+20-Casas de Misiones
+21-San Ignacio y Real Colegio de San Carlos"  alt="">
+            <area shape="rect" coords="215,175,245,205" title="19A,B -Correo
+22-Cafe de Marco"  alt="">
+            <area shape="rect" coords="185,200,210,230" title="25-Casa de Martin de Alzaga"  alt="">
+            <area shape="rect" coords="140,170,210,198" title="23-Casa de Diego Aguero"  alt="">
+            <area shape="rect" coords="110,170,140,198" title="24-Plaza Chica"  alt="">
+            <area shape="rect" coords="115,200,140,230" title="30-Casas de Martin de Sarratea,Juan de Lezica y Benito Rivadavia
+31-Casa de Liniers"  alt="">
+            <area shape="rect" coords="140,200,170,230" title="25B-Casa de Cornelio Saavedra
+29-Casa de Francisco Telechea"  alt="">
+            <area shape="rect" coords="215,200,245,230" title="26-Botica de Marull
+27-Altos de Altolaguirre"  alt="">
+            <area shape="rect" coords="55,200,80,230" title="32-Casa de Juan de Vicot"  alt="">
+            <area shape="rect" coords="55,230,80,250" title="33-Hospital de Betlemitas"  alt="">
+            <area shape="rect" coords="85,230,110,250" title="34-Casa de Manuel de Lavarden" 
+                alt="">
+            <area shape="rect" coords="115,230,135,250" title="35-Iglesia y Convento de Santo Domingo"
+                 alt="">
+            <area shape="rect" coords="115,250,135,285" title="36-Fonda los Tres Reyes"  alt="">
+            <area shape="rect" coords="185,230,210,260" title="39-Iglesia de San Francisco"  alt="">
+            <area shape="rect" coords="215,230,245,260" title="40-Altos de Escalada"  alt="">
+            <area shape="rect" coords="280,230,305,260" title="41-Huecos de las Animas"  alt="">
+            <area shape="rect" coords="310,200,345,230" title="43-Real Consulado
+49-Casa de Mariano Moreno"  alt="">
+            <area shape="rect" coords="350,200,375,230" title="45-Teatro Provisional de Comedias" 
+                alt="">
+            <area shape="rect" coords="350,235,375,260" title="44-Iglesia y Convento de la Merced" 
+                alt="">
+            <area shape="rect" coords="350,170,375,200" title="46-Casa de Mariquita Sanchez de Thompson"
+                 alt="">
+            <area shape="rect" coords="350,140,375,170"
+                title="47-Casas de Bartolome Gonzalez Arias Hidalgo, Lucas Vivas, y Gregorio ..." 
+                alt="">
+            <area shape="rect" coords="380,140,405,170" title="48-Casa de Ana Acevedo y Heredia Jose Cabot"
+                 alt="">
+            <area shape="rect" coords="380,200,405,230" title="51-Casa de Ignacio Taibo
+52-Casa de Ana Pericon de O Gorman..."  alt="">
+            <area shape="rect" coords="410,35,440,60" title="50-Iglesia de San Nicolas"  alt="">
+            <area shape="rect" coords="550,5,570,30" title="57-Hueco de Doña Engracia"  alt="">
+            <area shape="rect" coords="510,85,540,110" title="56-Iglesia del Socorro"  alt="">
+            <area shape="rect" coords="510,145,540,170" title="55-Iglesia de Valdovinos"  alt="">
+            <area shape="rect" coords="590,145,620,220" title="58-Plaza de Toros
+59-Parque de Artilleria"  alt="">
+            <area shape="rect" coords="660,85,730,110" title="60-Quinta de Riglos"  alt="">
+            <area shape="rect" coords="660,55,730,80" title="61-Quinta de Zuloaga"  alt="">
+            <area shape="rect" coords="660,25,730,50" title="62-Quinta de Otarola"  alt="">
+        </map> -->
+        <!--<div class="barra"></div><br>
+         <h2>PRÓXIMOS EVENTOS</h2><br>
+        <div class="card-group">
+            <div class="card">
+                <img src="./multimedia/eventos/autos.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Exposición Autos Clásicos</h5>
+                    <p class="card-text">ACÁ IRÍA INFO SOBRE QUÉ ACONTECE EN EL EVENTO</p>
+                    <p class="card-text"><small class="text-muted">ACÁ IRÍA LA FECHA Y HORARIOS</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./multimedia/eventos/jura.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Jura a la Bandera Argentina</h5>
+                    <p class="card-text">ACÁ IRÍA INFO SOBRE QUÉ ACONTECE EN EL EVENTO</p>
+                    <p class="card-text"><small class="text-muted">ACÁ IRÍA LA FECHA Y HORARIOS</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./multimedia/IMG_20250401_220339351.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Reunión Ex Soldados del GADA 101</h5>
+                    <p class="card-text">ACÁ IRÍA INFO SOBRE QUÉ ACONTECE EN EL EVENTO</p>
+                    <p class="card-text"><small class="text-muted">ACÁ IRÍA LA FECHA Y HORARIOS</small></p>
+                </div>
+            </div>
+        </div><br>
+        <div class="barra"></div><br>
+        <h2>EVENTOS REALIZADOS</h2><br>
+        <div class="card-group">
+            <div class="card">
+                <img src="./multimedia/eventosP/jura.webp" class="card-img-top"
+                    alt="Jura a la bandera con banda militar y alumnos escolares">
+                <div class="card-body">
+                    <h5 class="card-title">Jura y Promesa a la Bandera</h5>
+                    <p class="card-text">Soldados voluntarios y alumnos de escuelas primarias realizaron la jura y
+                        promesa a la Bandera Nacional. La ceremonia fue acompañada por la Banda Militar, que interpretó
+                        el Himno y marchas patrias, emocionando a todos los presentes.</p>
+                    <p class="card-text"><small class="text-muted">20/06/25</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./multimedia/eventos/autos.webp" class="card-img-top" alt="Exposición de autos clásicos">
+                <div class="card-body">
+                    <h5 class="card-title">Exposición de Autos Clásicos</h5>
+                    <p class="card-text">Se realizó una exhibición de vehículos clásicos en el predio del Museo
+                        Histórico del Ejército Argentino. El evento reunió a entusiastas, familias y coleccionistas que
+                        compartieron su pasión por la historia del automovilismo.</p>
+                    <p class="card-text"><small class="text-muted">18/05/25</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./multimedia/eventosP/DSC02399.webp" class="card-img-top" alt="Imagen de la Bandera Nacional">
+                <div class="card-body">
+                    <h5 class="card-title">Formación Día del Ejército</h5>
+                    <p class="card-text">Se realizó la formación en conmemoración del aniversario de la creación del
+                        Ejército Argentino, se izó la Bandera Nacional Argentina y se leyó la orden del día.</p>
+                    <p class="card-text"><small class="text-muted">29/05/25</small></p>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+
+
+    <div id="footer"></div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const slider = document.querySelector(".slider");
+
+        function activate(e) {
+            const items = document.querySelectorAll(".item");
+            e.target.matches(".next") && slider.append(items[0]);
+            e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+        }
+
+        document.addEventListener("click", activate, false);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"></script>
+
+
+</body>
+
+</html>
