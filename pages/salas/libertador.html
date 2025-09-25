@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es" class="hydrated">
+
+<head>
+    <!-- SALA DE ARTILLERÍA, MUSEO DEL EJÉRCITO ARGENTINO -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Sala de Artillería - Museo del Ejército</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Exposición de la evolución histórica de la artillería del Ejército Argentino, desde los primeros cañones coloniales hasta los modernos sistemas Krupp">
+    <meta name="keywords"
+        content="Artillería, Cañones, Sistema Krupp, Historia Militar, Ejército Argentino, Parque de Artillería">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        #popup {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+
+    <div id="navbar2"></div>
+
+    <main class="col-10">
+        <h1>Sala de Libertador</h1>
+
+        <!-- Introducción -->
+        <div class="content-section">
+            <div class="text-content">
+                Esta sala rinde homenaje al Padre de la Patria, el General Don José de San Martín (1778–1850), figura
+                central en la historia militar y política de Argentina y de América del Sur. A través de una cuidada
+                selección de objetos originales, uniformes, armamento y material gráfico, se reconstruyen los momentos
+                más destacados de su vida, su pensamiento estratégico y su influencia perdurable.
+            </div>
+        </div>
+
+        <!-- Historia de los primeros cañones con carrusel -->
+        <div class="row-content">
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>1. Su Carrera Militar</h2>
+                    <div class="text-content">
+                        Desde sus inicios en el Ejército español hasta su destacado papel como conductor de la
+                        independencia americana, San Martín demostró una formación militar excepcional. La exposición
+                        presenta relatos de guerra y documentos de campaña que permiten comprender la profundidad de su
+                        pensamiento táctico y su compromiso con la causa libertadora. Su paso por el Regimiento de
+                        Murcia, su rol en las guerras napoleónicas, y su llegada a Buenos Aires en 1812 marcan el inicio
+                        de una gesta sin precedentes.
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-column">
+                <div id="carouselCañones" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/libertador/LIBERTADOR.webp" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/libertador/SALAS (1).JPG" class="d-block w-100"
+                                alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/libertador/SALAS (2).JPG" class="d-block w-100"
+                                alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipos de artillería -->
+        <div class="content-section">
+            <h2>2. Actores Fundamentales en su Vida</h2>
+            <div class="text-content">
+                A lo largo de su carrera, San Martín se rodeó de colaboradores clave, cuyas figuras también están
+                presentes en esta sala mediante retratos, crónicas y pinturas. Desde aliados como Bernardo O’Higgins y
+                Simón Bolívar, hasta figuras del Ejército de los Andes, cada actor refleja la dimensión colectiva de la
+                empresa emancipadora.
+            </div>
+        </div>
+
+        <!-- Sistema Krupp con carrusel -->
+        <div class="row-content">
+            <div class="carousel-column">
+                <div id="carouselKrupp" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/libertador/SALAS (3).webp" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/libertador/SALAS (4).webp" class="d-block w-100"
+                                alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/libertador/SALAS (5).webp" class="d-block w-100"
+                                alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>3. Uniformes Históricos</h2>
+                    <div class="text-content">
+                        Se exhiben chaquetillas, morriones y monturas de caballo utilizadas por las tropas
+                        sanmartinianas. Estos uniformes reflejan la evolución de la vestimenta militar de la época y
+                        aportan una visión tangible del estilo, la disciplina y la organización del Ejército de los
+                        Andes, que San Martín formó y lideró.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Elementos Complementarios -->
+        <div class="content-section">
+            <h2>4. Combates</h2>
+            <div class="text-content">
+                La sala incluye maquetas y croquis de guerra que ilustran los principales enfrentamientos comandados por
+                San Martín: el Combate de San Lorenzo, la Campaña de los Andes, y las batallas de Chacabuco y Maipú.
+                Complementan la muestra crónicas escritas por protagonistas de la época, aportando detalles sobre la
+                estrategia, el terreno y las condiciones humanas de cada combate.
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>5. Armamento</h2>
+            <div class="text-content">
+                El armamento exhibido destaca por su valor histórico y simbólico. Se presenta una réplica del sable
+                corvo de San Martín, arma que lo acompañó durante sus campañas, junto a pistolas de oficiales del siglo
+                XIX y un cañón de 24 libras, pieza representativa de la artillería utilizada durante las guerras de
+                independencia.
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>6. Objetos Representativos</h2>
+            <div class="text-content">
+                La exposición culmina con una muestra de banderas históricas, estandartes y pabellones que acompañaron
+                al Ejército Libertador. Estos símbolos, cargados de valor patriótico, representan el ideal sanmartiniano
+                de unión americana y el profundo respeto por la libertad de los pueblos. <br>
+
+                Esta sala invita a reflexionar sobre el legado militar, político y humano del General San Martín,
+                ofreciendo un recorrido visual y documental por la historia de quien forjó una de las campañas
+                libertadoras más importantes del continente.
+
+
+            </div>
+        </div>
+
+        <!-- Tarjetas interactivas -->
+        <!-- <h2>Galería Interactiva</h2>
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Cañones de Bronce</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones de bronce del siglo XIX, utilizados durante las primeras campañas militares
+                                argentinas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Artillería de Campaña</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Piezas móviles y versátiles empleadas en apoyo directo a las tropas en el campo de
+                                batalla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Sistema Krupp</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones alemanes de acero con mecanismos de retrocarga que revolucionaron la artillería
+                                argentina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Carros de Transporte</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Vehículos especializados para el traslado de piezas de artillería hasta posiciones
+                                estratégicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Municiones</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Diversos tipos de proyectiles: explosivos, fragmentación, iluminantes y de humo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Herramientas</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cajas con instrumentos especializados para mantenimiento, apuntado y carga de las piezas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="barra"></div>
+        <a href="../virtuales/salas.html" class="volver">🡨</a>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es" class="hydrated">
+
+<head>
+    <!-- SALA DE ARTILLERÍA, MUSEO DEL EJÉRCITO ARGENTINO -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Sala de Artillería - Museo del Ejército</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Exposición de la evolución histórica de la artillería del Ejército Argentino, desde los primeros cañones coloniales hasta los modernos sistemas Krupp">
+    <meta name="keywords"
+        content="Artillería, Cañones, Sistema Krupp, Historia Militar, Ejército Argentino, Parque de Artillería">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        #popup {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .wrapper {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+
+        .cols {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+
+        .carousel-container {
+            margin: 2rem 0;
+        }
+
+        .row-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .text-column {
+            flex: 1;
+        }
+
+        .carousel-column {
+            flex: 1;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+
+    <div id="navbar2"></div>
+
+    <main class="col-10">
+        <h1>Sala de la ONU</h1>
+
+        <!-- Introducción -->
+        <div class="content-section">
+            <div class="text-content">
+                La Organización de las Naciones Unidas (ONU) fue creada en 1945 tras la Segunda Guerra Mundial, con el
+                propósito de mantener la paz y la seguridad internacionales, fomentar relaciones amistosas entre las
+                naciones y promover el respeto por los derechos humanos. Desde entonces, ha impulsado numerosas misiones
+                de paz con el objetivo de prevenir conflictos, proteger a la población civil y facilitar procesos de paz
+                duraderos. </div>
+        </div>
+
+        <!-- Historia de los primeros cañones con carrusel -->
+        <div class="row-content">
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>Historia y Objetivos de las Misiones de Paz</h2>
+                    <div class="text-content">
+                        Las misiones de paz de la ONU nacieron formalmente en 1948 con el despliegue de observadores
+                        militares en el conflicto árabe-israelí. Desde entonces, se han llevado a cabo más de 70
+                        operaciones en diversas regiones del mundo. Su objetivo principal es mantener o restablecer la
+                        paz y la seguridad en zonas de conflicto, actuando con imparcialidad, sin el uso de la fuerza
+                        salvo en defensa propia y con el consentimiento de las partes implicadas.
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-column">
+                <div id="carouselCañones" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/onu/DSC01483.JPG" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/onu/DSC01484.JPG" class="d-block w-100"
+                                alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/onu/DSC01485.JPG" class="d-block w-100"
+                                alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipos de artillería -->
+        <div class="content-section">
+            <h2>Participación del Ejército Argentino</h2>
+            <div class="text-content">
+                El Ejército Argentino ha sido un activo colaborador en múltiples misiones de paz, representando al país
+                en operaciones internacionales y reafirmando su compromiso con los principios del derecho internacional
+                y los valores democráticos. Desde su primera participación en 1958, ha intervenido en zonas como Chipre,
+                Haití, Kosovo, Medio Oriente y África, cumpliendo funciones logísticas, médicas, de ingeniería,
+                seguridad y observación. Su participación ha sido reconocida por su profesionalismo, capacidad operativa
+                y vocación humanitaria.
+            </div>
+        </div>
+
+        <!-- Sistema Krupp con carrusel -->
+        <div class="row-content">
+            <div class="carousel-column">
+                <div id="carouselKrupp" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/onu/DSC01486.JPG" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/onu/DSC01489.JPG" class="d-block w-100"
+                                alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/onu/DSC01491.JPG" class="d-block w-100"
+                                alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>Uniformes y Distintivos</h2>
+                    <div class="text-content">
+                        En esta sala se pueden observar los uniformes contemporáneos utilizados por el Ejército
+                        Argentino en operaciones de paz, los cuales incorporan el característico casco o boina azul,
+                        símbolo universal de las fuerzas de paz. Además, se exponen distintivos y emblemas que
+                        identifican la pertenencia a una misión específica o a la ONU.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Elementos Complementarios -->
+        <div class="content-section">
+            <h2>Infografías Informativas</h2>
+            <div class="text-content">
+                Las infografías presentan una visión global de los conflictos internacionales donde la ONU ha
+                intervenido, así como un detalle de los escenarios en los que el Ejército Argentino ha prestado
+                servicio. Estas representaciones visuales ayudan a comprender la magnitud y la diversidad de las
+                misiones, así como la geografía del compromiso argentino.
+            </div>
+        </div>
+
+        <!-- Elementos Complementarios -->
+        <div class="content-section">
+            <h2>Objetos Representativos</h2>
+            <div class="text-content">
+                Entre los objetos expuestos se encuentran estandartes oficiales de la ONU, banderas de los países
+                fundadores, y elementos traídos de las regiones donde se llevaron a cabo las misiones. Estos objetos no
+                solo representan las culturas locales, sino también la interacción y el respeto mutuo que caracterizan
+                la labor de las fuerzas de paz.
+            </div>
+        </div>
+        <!-- Tarjetas interactivas -->
+        <!-- <h2>Galería Interactiva</h2>
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Cañones de Bronce</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones de bronce del siglo XIX, utilizados durante las primeras campañas militares
+                                argentinas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Artillería de Campaña</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Piezas móviles y versátiles empleadas en apoyo directo a las tropas en el campo de
+                                batalla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Sistema Krupp</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones alemanes de acero con mecanismos de retrocarga que revolucionaron la artillería
+                                argentina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Carros de Transporte</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Vehículos especializados para el traslado de piezas de artillería hasta posiciones
+                                estratégicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Municiones</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Diversos tipos de proyectiles: explosivos, fragmentación, iluminantes y de humo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Herramientas</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cajas con instrumentos especializados para mantenimiento, apuntado y carga de las piezas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="barra"></div>
+        <a href="../virtuales/salas.html" class="volver">🡨</a>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

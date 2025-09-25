@@ -1,0 +1,334 @@
+<html lang="en" class="hydrated">
+
+<head>
+    <!-- vs "ec " LLADOS, CESAR AGUSTIN -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Museo del Ejercito</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+    <!-- SEO -->
+    <meta name="description"
+        content="El edificio de esta direccion fue inaugurado en el año 1881 como la casa de la moneda,su construccion habia sido aprobada en 1875, a partir de la ley 733 por decreto Nº 2186 el 4 de septiembre de 1979. Es declarado como monumento Historico Nacional">
+    <meta name="keywords"
+        content="Patrimonio documental Historico, Archivo Historico, Fondo Documental, Gestion Administracion Archivos Historicos, Servicio Historico">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        #popup {
+            display: none;
+        }
+
+        /* utility */
+        .load-hidden {
+            visibility: hidden;
+        }
+
+
+
+        .widget {
+            width: 15%;
+            height: 50px;
+            flex: auto;
+            margin: 0.5rem;
+            background: white;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* extension */
+        html.sr .card {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showDate = new Date("2024-08-17");
+
+            const hideDate = new Date("2024-11-10");
+            const currentDate = new Date();
+            if (currentDate >= showDate && currentDate <= hideDate) {
+                const popup = document.getElementById("popup");
+                popup.style.display = "block";
+            }
+
+            const closeButton = document.getElementById("closeButton");
+            closeButton.addEventListener("click", function () {
+                const popup = document.getElementById("popup");
+                popup.style.display = "none";
+            });
+        });
+    </script>
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+
+    <div id="navbar2"></div>
+
+
+    <main class="col-10">
+        <h2>SALAS Y PARQUES DEL MUSEO</h2>
+        <div class="card-group">
+            <div class="card">
+                <h4 class="card-title"><strong>Sala Malvinas Argentinas</strong></h4>
+                <img src="../../multimedia/salas/Malvinas/MALVINAS.webp" class="card-img-top"
+                    alt="Sala Malvinas Argentinas">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Representa la historia político-militar del archipiélago, desde la
+                            dominación española hasta el conflicto librado con el Reino Unido de Gran Bretaña (1982).
+                            Exhibición de armas y equipos uitilizados en aquella gesta.</p>
+                        <p class="card-text"><small class="text-muted">Exhibición de Historia Militar</small></p>
+                    </div>
+                    <a href="../salas/malvinas.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de la Libertad</strong></h5>
+                <img src="../../multimedia/salas/libertad/libertadorcanon01.webp" class="card-img-top"
+                    alt="Sala de la Libertad">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Representa el período colonial, las fundaciones, los inicios de las armas
+                            argentinas. Desde la creación del Virreinato del Río de la Plata, pasando por las invasiones
+                            inglesas, hasta las batallas por la emancipación nacional.</p>
+                        <p class="card-text"><small class="text-muted">Período Colonial e Independencia</small></p>
+                    </div>
+                    <a href="../salas/libertad.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala del Libertador</strong></h5>
+                <img src="../../multimedia/salas/Libertador/LIBERTADOR.webp" class="card-img-top"
+                    alt="Sala del Libertador">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Dedicada a la figura e historia del General José de San Martín, su vida,
+                            sus campañas militares y su decisivo accionar durante la lucha por la independencia de
+                            América Latina.</p>
+                        <p class="card-text"><small class="text-muted">Homenaje a José de San Martín</small></p>
+                    </div>
+                    <a href="../salas/libertador.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de Misiones de Paz</strong></h5>
+                <img src="../../multimedia/salas/artilleria/100_8188.webp" class="card-img-top"
+                    alt="Sala de Misiones de Paz">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Expone la participación de la Argentina en las diversas misiones de paz de
+                            la ONU, especialmente, el rol cumplido por el Ejército Argentino como parte de ellas a lo
+                            largo de la historia.</p>
+                        <p class="card-text"><small class="text-muted">Esfuerzos de Mantenimiento de Paz</small></p>
+                    </div>
+                    <a href="../salas/onu.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de Infantería</strong></h5>
+                <img src="../../multimedia/salas/Infanteria/100_7750.webp" class="card-img-top"
+                    alt="Sala de Infantería">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Representa la historia de los regimientos de la infantería creados durante
+                            el período de la independencia, los hombres que forjaron el derrotero de la misma, y las
+                            especialidades de la infantería moderna.</p>
+                        <p class="card-text"><small class="text-muted">Evolución Histórica de Infantería</small></p>
+                    </div>
+                    <a href="../salas/infanteria.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de Artillería</strong></h5>
+                <img src="../../multimedia/salas/artilleria/100_8158.webp" class="card-img-top"
+                    alt="Sala de Artillería">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Muestra la evolución del arma y sus regimientos desde el período de la
+                            independencia hasta nuestros días y aquellas batallas en las que desempeñó un rol
+                            fundamental.</p>
+                        <p class="card-text"><small class="text-muted">Desarrollo Histórico de Artillería</small></p>
+                    </div>
+                    <a href="../salas/artilleria.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de Bandas Militares</strong></h5>
+                <img src="../../multimedia/salas/bandas/banda.webp"
+                    class="card-img-top" alt="Sala de Bandas Militares">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Muestra el accionar de la especialidad en etapas claves de la historia
+                            argentina: la creación del Himno Nacional y su acompañamiento al ejército en las grandes
+                            batallas.</p>
+                        <p class="card-text"><small class="text-muted">Herencia Musical Militar</small></p>
+                    </div>
+                    <a href="../salas/sala_bandas.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de Intendencia</strong></h5>
+                <img src="../../multimedia/salas/intendencia/100_8135.webp" class="card-img-top"
+                    alt="Sala de Intendencia">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Exhibe en su interior muestras del apoyo que ha brinado la especialidad al
+                            ejército a través de las distintas etapas de nuestra historia.</p>
+                        <p class="card-text"><small class="text-muted">Apoyo Logístico Militar</small></p>
+                    </div>
+                    <a href="../salas/intendencia.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de Ingenieros</strong></h5>
+                <img src="../../multimedia/salas/ingenieros/MarkMelzi_1539.webp"
+                    class="card-img-top" alt="Sala de Ingenieros">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Exhibe en su interior muestras del apoyo que ha brinado la especialidad al
+                            ejército a través de las distintas etapas de nuestra historia.</p>
+                        <p class="card-text"><small class="text-muted">Apoyo Logístico Militar</small></p>
+                    </div>
+                    <a href="../salas/ingenieros.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala de Comunicaciones</strong></h5>
+                <img src="../../multimedia/salas/comunicaciones/MM0_1304.webp" class="card-img-top"
+                    alt="Sala de Comunicaciones">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Exhibe en su interior muestras del apoyo que ha brinado la especialidad al
+                            ejército a través de las distintas etapas de nuestra historia.</p>
+                        <p class="card-text"><small class="text-muted">Apoyo Logístico Militar</small></p>
+                    </div>
+                    <a href="../salas/comunicaciones.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Parque de Artillería</strong></h5>
+                <img src="../../multimedia/salas/P_Artilleria/DSC03659.webp"
+                    class="card-img-top" alt="Parque de Artillería">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Se pueden observar distintas piezas que fueron utilizadas por la Fuerza en
+                            distintas épocas.</p>
+                        <p class="card-text"><small class="text-muted">Colección Histórica de Artillería</small></p>
+                    </div>
+                    <a href="../salas/pArtilleria.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Parque de Blindados</strong></h5>
+                <img src="../../multimedia/salas/P_Blindados/DSC03666.webp"
+                    class="card-img-top" alt="Parque de Blindados">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">En este parque se exhiben vehículos blindados que pertenecieron al Ejército
+                            y fueron reemplazados posteriormente, ente ellos los conocidos y queridos Sherman.</p>
+                        <p class="card-text"><small class="text-muted">Exhibición de Vehículos Blindados</small></p>
+                    </div>
+                    <a href="../salas/parques_blindados.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+         <!--    <div class="card">
+                <h5 class="card-title"><strong>Parque Automotor</strong></h5>
+                <img src="../../multimedia/salas/automotor/100_7777.webp" class="card-img-top" alt="Parque Automotor">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Aquí se exhiben distintos tipos de vehículos a rueda, semi-oruga y anfibios
+                            que prestaron servicio hace algunos años.</p>
+                        <p class="card-text"><small class="text-muted">Colección de Vehículos Militares</small></p>
+                    </div>
+                    <a href="../salas/a.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div> -->
+
+            <div class="card">
+                <h5 class="card-title"><strong>Parque de Aviacion</strong></h5>
+                <img src="../../multimedia/salas/aviacion/AVIACION.webp" class="card-img-top" alt="Parque de Aviacion">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Aquí se exhiben distintos tipos de vehículos a rueda, semi-oruga y anfibios
+                            que prestaron servicio hace algunos años.</p>
+                        <p class="card-text"><small class="text-muted">Colección de Vehículos Militares</small></p>
+                    </div>
+                    <a href="../salas/pAviacion.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5 class="card-title"><strong>Sala Capilla</strong></h5>
+                <img src="../../multimedia/salas/capilla/portada.webp" class="card-img-top" alt="Sala Capilla">
+                <div class="card-body">
+                    <div class="card-text-group">
+                        <p class="card-text">Aquí se exhiben distintos tipos de vehículos a rueda, semi-oruga y anfibios
+                            que prestaron servicio hace algunos años.</p>
+                        <p class="card-text"><small class="text-muted">Colección de Vehículos Militares</small></p>
+                    </div>
+                    <a href="../salas/capilla.html" class="buttonVerMas">Ver Mas</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script>
+        ScrollReveal().reveal('.card-group', { duration: 2000 });
+        ScrollReveal().reveal('.card', { interval: 200 });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const slider = document.querySelector(".slider");
+
+        function activate(e) {
+            const items = document.querySelectorAll(".item");
+            e.target.matches(".next") && slider.append(items[0]);
+            e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+        }
+
+        document.addEventListener("click", activate, false);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="../../js/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<html lang="en" class="hydrated">
+
+<head>
+    <!-- vs "ec " LLADOS, CESAR AGUSTIN -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Museo del Ejercito</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="El edificio de esta direccion fue inaugurado en el año 1881 como la casa de la moneda,su construccion habia sido aprobada en 1875, a partir de la ley 733 por decreto Nº 2186 el 4 de septiembre de 1979. Es declarado como monumento Historico Nacional">
+    <meta name="keywords"
+        content="Patrimonio documental Historico, Archivo Historico, Fondo Documental, Gestion Administracion Archivos Historicos, Servicio Historico">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+    <style>
+        #popup {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section {
+            width: 70%;
+            margin: 1% auto;
+            padding: 2rem;
+            display: flex;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            place-content: space-evenly;
+
+            img {
+                height: 100;
+            }
+        }
+
+        .content-section2 {
+            width: 70%;
+            margin: 1% auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: row-reverse;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            place-content: space-evenly;
+
+            img {
+                height: 100;
+            }
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+            align-content: center;
+        }
+
+        .wrapper {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+
+        .cols {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            margin: 1rem;
+            cursor: pointer;
+        }
+
+        .container {
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+        }
+
+        .front,
+        .back {
+            background-size: cover;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            background-position: center;
+            -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            text-align: center;
+            min-height: 280px;
+            height: auto;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .back {
+            background: #6a6a6a;
+            background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+            background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+            background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+        }
+
+        .front:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            content: '';
+            display: block;
+            opacity: .6;
+            background-color: #000;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .container:hover .front,
+        .container:hover .back {
+            -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        }
+
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .inner {
+            -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+            top: 50%;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: 1px solid transparent;
+            -webkit-perspective: inherit;
+            perspective: inherit;
+            z-index: 2;
+        }
+
+        .container .back {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .container .front {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .container:hover .back {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .container:hover .front {
+            -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .front .inner p {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .front .inner p:after {
+            content: '';
+            width: 4rem;
+            height: 2px;
+            position: absolute;
+            background: #C6D4DF;
+            display: block;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -.75rem;
+        }
+
+        .front .inner span {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Montserrat';
+            font-weight: 300;
+        }
+
+        .cols {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+
+        .carousel-container {
+            margin: 2rem 0;
+        }
+
+        .row-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .text-column {
+            flex: 1;
+        }
+
+        .carousel-column {
+            flex: 1;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="indexBackground">
+
+    <div id="navbar2"></div>
+
+
+    <main class="col-10 autoridades">
+        <h2>AUTORIDADES</h2>
+        <div class="card-group">
+            <div class="card">
+                <img src="../../multimedia/autoridades/cr.webp" class="card-img-top" alt="Imagen deL CR GOMEZ">
+                <div class="card-body">
+                    <h5 class="card-title">CR GOMEZ, JULIO ADRIAN</h5>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../multimedia/autoridades/ludueña.png" class="card-img-top" alt="Imagen deL CR GOMEZ">
+                <div class="card-body">
+                    <h5 class="card-title">SM LUDUEÑA, CESAR LUIS</h5>
+
+                </div>
+            </div>
+
+            <!-- <div class="card">
+                <img src="./multimedia/eventosP/DSC02414.JPG" class="card-img-top" alt="Imagen del SM LUDUEÑA">
+                <div class="card-body">
+                    <h5 class="card-title">SM LUDUEÑA</h5>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="./multimedia/eventosP/DSC02399.JPG" class="card-img-top" alt="Imagen del SP SIMIAN">
+                <div class="card-body">
+                    <h5 class="card-title">SM SIMIAN</h5>
+                    
+                </div>
+            </div> -->
+        </div>
+        <div class="linea">
+            <div class="content-section">
+                <img src="../../multimedia/construccion.jpg" alt="">
+                <div class="text-content">
+                    <h3>TC. RIVAS GERARDO LUIS</h3>
+                    <h5>PERIODO QUE EJERCIO COMO AUTORIDAD</h5>
+                </div>
+            </div>
+            <div class="content-section2">
+                <img src="../../multimedia/construccion.jpg" alt="">
+                <div class="text-content">
+                    <h3>TC. RIVAS GERARDO LUIS</h3>
+                    <h5>PERIODO QUE EJERCIO COMO AUTORIDAD</h5>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id='vrview'></div>
+    </main>
+    <div id="footer"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const slider = document.querySelector(".slider");
+
+        function activate(e) {
+            const items = document.querySelectorAll(".item");
+            e.target.matches(".next") && slider.append(items[0]);
+            e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+        }
+
+        document.addEventListener("click", activate, false);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="../../js/script.js"></script>
+
+
+</body>
+
+</html>

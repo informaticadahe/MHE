@@ -1,0 +1,382 @@
+<html lang="en" class="hydrated">
+
+<head>
+    <!-- vs "ec " LLADOS, CESAR AGUSTIN -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Museo del Ejercito</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+    <!-- SEO -->
+    <meta name="description"
+        content="El edificio de esta direccion fue inaugurado en el año 1881 como la casa de la moneda,su construccion habia sido aprobada en 1875, a partir de la ley 733 por decreto Nº 2186 el 4 de septiembre de 1979. Es declarado como monumento Historico Nacional">
+    <meta name="keywords"
+        content="Patrimonio documental Historico, Archivo Historico, Fondo Documental, Gestion Administracion Archivos Historicos, Servicio Historico">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        #popup {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showDate = new Date("2024-08-17");
+
+            const hideDate = new Date("2024-11-10");
+            const currentDate = new Date();
+            if (currentDate >= showDate && currentDate <= hideDate) {
+                const popup = document.getElementById("popup");
+                popup.style.display = "block";
+            }
+
+            const closeButton = document.getElementById("closeButton");
+            closeButton.addEventListener("click", function () {
+                const popup = document.getElementById("popup");
+                popup.style.display = "none";
+            });
+        });
+    </script>
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+
+    <div id="navbar2"></div>
+
+
+    <main class="col-10">
+        <h1>Sala Infantería</h1>
+        <!-- Introducción -->
+        <div class="content-section">
+            <div class="text-content">
+                La Sala Histórica del Arma de Infantería del Ejército Argentino es un espacio dedicado a preservar,
+                difundir y honrar la rica tradición, evolución y valores de una de las armas más antiguas y
+                fundamentales de nuestra Fuerza. A través de una cuidada exposición de objetos, documentos y
+                representaciones visuales, se invita al visitante a recorrer los hitos más destacados de la Infantería,
+                su aporte a la historia nacional y su rol en la defensa de la soberanía.
+            </div>
+        </div>
+
+        <!-- Historia de los primeros cañones con carrusel -->
+        <div class="row-content">
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>1. Personajes Ilustres</h2>
+                    <div class="text-content">
+                        La historia de la Infantería argentina está marcada por hombres y mujeres que se distinguieron
+                        por su valentía, liderazgo y compromiso con la patria. A través de sus carreras militares, estos
+                        personajes dejaron una huella profunda en la historia nacional. En esta sección, se destacan sus
+                        trayectorias, el contexto histórico en el que actuaron y sus aportes al desarrollo doctrinario,
+                        táctico y estratégico del Arma de Infantería.
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-column">
+                <div id="carouselCañones" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/infanteria/100_7750.webp" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/infanteria/DSC03553.webp" class="d-block w-100"
+                                alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/infanteria/DSC03559.webp" class="d-block w-100"
+                                alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipos de artillería -->
+        <div class="content-section">
+            <h2>2. Los Doce Regimientos Históricos</h2>
+            <div class="text-content">
+                Esta exposición pone en valor a los doce regimientos históricos de Infantería que participaron en las
+                gestas más importantes del país. Se exhiben uniformes representativos de distintas épocas,
+                condecoraciones obtenidas en campañas nacionales e internacionales, y un repaso por las batallas más
+                destacadas en las que dejaron su impronta. Estas unidades representan la continuidad histórica del
+                espíritu de lucha y sacrificio del soldado argentino.
+            </div>
+        </div>
+
+        <!-- Sistema Krupp con carrusel -->
+        <div class="row-content">
+            <div class="carousel-column">
+                <div id="carouselKrupp" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/infanteria/DSC03562.webp" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/infanteria/DSC03564.webp" class="d-block w-100"
+                                alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/infanteria/DSC03569.webp" class="d-block w-100"
+                                alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>3. “Unión en la Diversidad”: Especializaciones de Infantería</h2>
+                    <div class="text-content">
+                        La Infantería se distingue por su adaptabilidad y la variedad de funciones que cumple en el
+                        terreno. Esta sección presenta una reseña de las principales especializaciones que la componen:
+                        infantería mecanizada, de montaña, aerotransportada, blindada y ligera, entre otras. A través de
+                        maquetas detalladas, armamento específico y uniformes característicos, se ilustra cómo cada
+                        especialidad responde a los distintos escenarios geográficos y tácticos de nuestro país.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Elementos Complementarios -->
+        <div class="content-section">
+            <h2>4. Armamento Histórico</h2>
+            <div class="text-content">
+                El armamento utilizado por la Infantería a lo largo del tiempo refleja la evolución tecnológica y
+                táctica del combate. En esta sección se exhiben: <br>
+                Armas blancas como cuchillos de trinchera y bayonetas históricas.<br>
+
+                Fusiles utilizados desde las guerras de independencia hasta los conflictos modernos.<br>
+
+                Sables bayoneta de oficiales y suboficiales.<br>
+
+                Armas de puño, incluyendo revólveres y pistolas reglamentarias.<br>
+
+                Pistolas ametralladoras y ametralladoras, claves en el fuego de apoyo moderno.<br>
+
+                Cada pieza se acompaña de una breve descripción técnica y contexto histórico de su uso.
+
+
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>5. Objetos Representativos</h2>
+            <div class="text-content">
+                El espíritu y la identidad del Arma de Infantería también se reflejan en sus símbolos. En esta sección
+                se presentan: <br>
+                Banderas históricas que flamearon en campañas fundamentales para la patria.<br>
+                Estandartes y emblemas que identifican a regimientos y unidades de Infantería.<br>
+                Estos objetos no solo representan la pertenencia y el honor, sino que también evocan el sacrificio de
+                aquellos que lucharon bajo sus colores.<br>
+                Este espacio busca no solo conservar la memoria, sino también inspirar a las nuevas generaciones de
+                soldados y ciudadanos en los valores de patriotismo, coraje y compromiso que caracterizan al infante
+                argentino.
+
+            </div>
+        </div>
+        <!-- Tarjetas interactivas -->
+        <!-- <h2>Galería Interactiva</h2>
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image:  url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXrYOpKQdu0EaYefMxhASB3K2zobhS8CAHz0Y-G3EqEdZL7zpTJovZtSS_LdYJzAU47NpEZfIi2EXMZurMMHKExr52izU3-n-RaVJYbnQMYGRlRnRdCJv3PwMa_hnx3POnUvvSVevXU2M/s1600/elementos-en-construccion.webp") '>
+                        <div class="inner">
+                            <p>Diligord</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit
+                                quae suscipit c.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image:url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Rocogged</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit
+                                quae suscipit c.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image:  url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXrYOpKQdu0EaYefMxhASB3K2zobhS8CAHz0Y-G3EqEdZL7zpTJovZtSS_LdYJzAU47NpEZfIi2EXMZurMMHKExr52izU3-n-RaVJYbnQMYGRlRnRdCJv3PwMa_hnx3POnUvvSVevXU2M/s1600/elementos-en-construccion.webp") '>
+                        <div class="inner">
+                            <p>Strizzes</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit
+                                quae suscipit c.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image:  url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXrYOpKQdu0EaYefMxhASB3K2zobhS8CAHz0Y-G3EqEdZL7zpTJovZtSS_LdYJzAU47NpEZfIi2EXMZurMMHKExr52izU3-n-RaVJYbnQMYGRlRnRdCJv3PwMa_hnx3POnUvvSVevXU2M/s1600/elementos-en-construccion.webp") '>
+                        <div class="inner">
+                            <p>Clossyo</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit
+                                quae suscipit c.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image:  url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXrYOpKQdu0EaYefMxhASB3K2zobhS8CAHz0Y-G3EqEdZL7zpTJovZtSS_LdYJzAU47NpEZfIi2EXMZurMMHKExr52izU3-n-RaVJYbnQMYGRlRnRdCJv3PwMa_hnx3POnUvvSVevXU2M/s1600/elementos-en-construccion.webp") '>
+                        <div class="inner">
+                            <p>Rendann</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit
+                                quae suscipit c.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image:  url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXrYOpKQdu0EaYefMxhASB3K2zobhS8CAHz0Y-G3EqEdZL7zpTJovZtSS_LdYJzAU47NpEZfIi2EXMZurMMHKExr52izU3-n-RaVJYbnQMYGRlRnRdCJv3PwMa_hnx3POnUvvSVevXU2M/s1600/elementos-en-construccion.webp") '>
+                        <div class="inner">
+                            <p>En construccion</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit
+                                quae suscipit c.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="barra"></div>
+        <a href="../virtuales/salas.html" class="volver">🡨</a>
+    </main>
+    <div id="footer"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const slider = document.querySelector(".slider");
+
+        function activate(e) {
+            const items = document.querySelectorAll(".item");
+            e.target.matches(".next") && slider.append(items[0]);
+            e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+        }
+
+        document.addEventListener("click", activate, false);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="../../js/script.js"></script>
+
+
+</body>
+
+</html>

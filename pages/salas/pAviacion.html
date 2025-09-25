@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es" class="hydrated">
+
+<head>
+    <!-- SALA DE ARTILLERÍA, MUSEO DEL EJÉRCITO ARGENTINO -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Parque de Aviacion - Museo del Ejército</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Exposición de la evolución histórica de la artillería del Ejército Argentino, desde los primeros cañones coloniales hasta los modernos sistemas Krupp">
+    <meta name="keywords"
+        content="Artillería, Cañones, Sistema Krupp, Historia Militar, Ejército Argentino, Parque de Artillería">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        #popup {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .wrapper {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+
+
+
+        .cols {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+
+        .carousel-container {
+            margin: 2rem 0;
+        }
+
+        .row-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .text-column {
+            flex: 1;
+        }
+
+        .carousel-column {
+            flex: 1;
+        }
+
+    </style>
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+
+    <div id="navbar2"></div>
+
+    <main class="col-10">
+        <h1>Parque de Aviacion</h1>
+
+        <!-- Introducción -->
+        <div class="content-section">
+            <div class="text-content">
+                La Aviación del Ejército Argentino constituye un componente fundamental de apoyo y proyección táctica en
+                el campo de operaciones. Su función principal es acompañar y reforzar el accionar terrestre de las
+                tropas, brindando movilidad, observación, evacuación médica, abastecimiento y enlace, entre otras
+                capacidades. <br>
+
+                Su desarrollo se ha forjado a lo largo de décadas, integrando aeronaves de ala fija y
+                rotatoria adaptadas a las exigencias del terreno, el clima y las misiones específicas de cada unidad del
+                Ejército.
+            </div>
+        </div>
+
+        <!-- Historia de los primeros cañones con carrusel -->
+        <div class="row-content">
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>Diferencias con la Fuerza Aérea</h2>
+                    <div class="text-content">
+                        Si bien tanto la Aviación del Ejército como la Fuerza Aérea Argentina operan aeronaves, sus
+                        funciones, organización y objetivos son distintos: <br>
+
+                        La Aviación del Ejército tiene un rol táctico: actúa en estrecha coordinación con las fuerzas
+                        terrestres, directamente en el campo de batalla. <br>
+
+                        La Fuerza Aérea Argentina, en cambio, cumple un rol estratégico, encargado del control del
+                        espacio aéreo nacional, defensa aérea, transporte logístico de largo alcance y operaciones
+                        aéreas de mayor escala. <br>
+
+                        Ambas fuerzas trabajan de manera complementaria dentro del sistema de defensa nacional.
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-column">
+                <div id="carouselCañones" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/P_Aviacion/AVIACION.JPG"
+                                class="d-block w-100" alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/P_Aviacion/DSC02206.JPG"
+                                class="d-block w-100" alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/P_Aviacion/DSC02208.JPG"
+                                class="d-block w-100" alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipos de artillería -->
+        <div class="content-section">
+            <h2>Historia de las Aeronaves Expuestas</h2>
+            <div class="text-content">
+                Las aeronaves exhibidas en esta sala representan distintos períodos del desarrollo de la Aviación del
+                Ejército: <br>
+
+                Cessna U-17: Aeronave de reconocimiento, entrenamiento y enlace, utilizada desde la década de 1960. <br>
+
+                Helicóptero Bell UH-1H “Huey”: Ícono de la aviación militar, incorporado en los años 70, ha cumplido
+                funciones en operaciones nacionales e internacionales. <br>
+
+                Grumman OV-1 Mohawk: Avión de observación táctica, incorporado en los años 90, con sensores de
+                vigilancia avanzada. <br>
+
+                Cada una refleja avances tecnológicos, cambios doctrinarios y la adaptación constante de la Aviación a
+                los desafíos operacionales del Ejército Argentino.
+
+            </div>
+        </div>
+
+        <!-- Sistema Krupp con carrusel -->
+        <div class="row-content">
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>Funciones de las Aeronaves Expuestas</h2>
+                    <div class="text-content">
+                        Las aeronaves aquí expuestas han cumplido diversas misiones: <br>
+
+                        Observación y reconocimiento aéreo <br>
+
+                        Transporte de tropas y carga <br>
+
+                        Evacuación sanitaria (MEDEVAC) <br>
+
+                        Comunicaciones y enlace <br>
+
+                        Apoyo a la población en emergencias (inundaciones, incendios, catástrofes naturales) <br>
+
+                        Estas funciones han sido clave para el éxito de las misiones tanto en el país como en el
+                        extranjero, donde el Ejército ha participado en operaciones de paz bajo mandato de las Naciones
+                        Unidas.
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-column">
+                <div id="carouselKrupp" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                     <div class="carousel-item active">
+                            <img src="../../multimedia/salas/P_Aviacion/DSC02242.JPG"
+                                class="d-block w-100" alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/P_Aviacion/DSC02243.JPG"
+                                class="d-block w-100" alt="Mecanismo de Retrocarga">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elementos Complementarios -->
+        <div class="content-section">
+            <h2>Partes de los Vehículos Aéreos</h2>
+            <div class="text-content">
+                Para comprender el funcionamiento de estas aeronaves, es importante reconocer sus partes principales:
+                <br>
+
+                Fuselaje: Cuerpo principal que aloja cabina, carga y pasajeros. <br>
+
+                Ala (en aviones): Permite la sustentación aérea. <br>
+
+                Rotor (en helicópteros): Sustituye a las alas y permite el despegue y aterrizaje vertical. <br>
+
+                Motor: Proporciona la potencia necesaria para el vuelo. <br>
+
+                Tren de aterrizaje: Sistema que permite el apoyo y desplazamiento terrestre. <br>
+
+                Instrumental de cabina: Conjunto de indicadores que asisten al piloto en el control de la aeronave.
+
+            </div>
+        </div>
+
+        <!-- Tarjetas interactivas -->
+      <!--   <h2>Galería Interactiva</h2>
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Cañones de Bronce</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones de bronce del siglo XIX, utilizados durante las primeras campañas militares
+                                argentinas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Artillería de Campaña</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Piezas móviles y versátiles empleadas en apoyo directo a las tropas en el campo de
+                                batalla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Sistema Krupp</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones alemanes de acero con mecanismos de retrocarga que revolucionaron la artillería
+                                argentina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Carros de Transporte</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Vehículos especializados para el traslado de piezas de artillería hasta posiciones
+                                estratégicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Municiones</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Diversos tipos de proyectiles: explosivos, fragmentación, iluminantes y de humo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Herramientas</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cajas con instrumentos especializados para mantenimiento, apuntado y carga de las piezas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="barra"></div>
+        <a href="../virtuales/salas.html" class="volver">🡨</a>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

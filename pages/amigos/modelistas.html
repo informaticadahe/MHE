@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" class="hydrated">
+
+<head>
+    <!-- vs "ec " LLADOS, CESAR AGUSTIN -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Museo del Ejercito - Modelistas</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Galería de modelistas del Museo del Ejército Argentino. Colección de maquetas y modelos militares históricos.">
+    <meta name="keywords"
+        content="Modelistas, Maquetas militares, Museo del Ejército, Historia militar argentina, Modelos a escala">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        #gallery {
+            display: grid;
+            min-height: calc(100vh - 200px);
+            height: auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-auto-rows: 200px;
+            grid-gap: 0.5em;
+            margin: 2rem 0;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        @media (max-width: 800px) {
+            #gallery {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                height: auto;
+            }
+
+            #gallery>div {
+                width: 48%;
+                margin: 1%;
+            }
+
+            @media (max-width: 350px) {
+                #gallery>div {
+                    width: 98%;
+                }
+            }
+        }
+
+        #gallery>div {
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 8px;
+        }
+
+        /* Grid Structure Variations */
+        #gallery>div:nth-child(3n + 1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        #gallery>div:nth-child(5n + 2) {
+            grid-row: span 2;
+        }
+
+        #gallery>div:nth-child(7n + 3) {
+            grid-column: span 2;
+        }
+
+        #gallery>div:nth-child(11n + 4) {
+            grid-row: span 3;
+        }
+
+        #gallery>div>a {
+            opacity: 0;
+            position: absolute;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            font: bold 2em "Montserrat";
+            text-shadow: 0 -1px 5px #000, -1px 0px 5px #000, 0 1px 5px #000, 1px 0px 5px #000;
+            padding: 1rem;
+            mix-blend-mode: normal;
+            width: 100%;
+            height: 100%;
+            transition: all ease 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        #gallery>div>img {
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            transition: all ease 0.5s;
+        }
+
+        #gallery>div:hover img {
+            transform: scale(1.1);
+        }
+
+        #gallery>div:hover a {
+            opacity: 1;
+        }
+
+        /* Lightbox Styles */
+        [id^="lightbox-"] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            opacity: 0;
+            transition: opacity 450ms ease-in-out;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        [id^="lightbox-"]:target {
+            opacity: 1;
+            pointer-events: inherit;
+        }
+
+        [id^="lightbox-"]:target img {
+            filter: blur(0);
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            color: #fff;
+        }
+
+        .lightbox-content:hover>a.close {
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+
+        .lightbox-content:hover>.title {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .lightbox-content:hover>.title::after {
+            opacity: 1;
+        }
+
+        .lightbox-content>* {
+            transition: all 450ms ease-in-out;
+        }
+
+        .title {
+            display: block;
+            margin: 0;
+            padding: 1em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transform: translateY(50%);
+            font-size: 1.5em;
+            opacity: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .title::after {
+            content: ' ';
+            background-color: rgba(0, 0, 0, 0.4);
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 350ms ease-in-out 250ms;
+            opacity: 0;
+            transform-origin: bottom;
+            mix-blend-mode: soft-light;
+        }
+
+        .lightbox-content img {
+            max-height: 90vh;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            filter: blur(20px);
+            transition: filter 450ms ease-in-out;
+            border-radius: 8px;
+        }
+
+        a.close {
+            width: 3em;
+            height: 3em;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0, 0);
+            opacity: 0;
+            transform-origin: right top;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 350ms ease-in-out;
+        }
+
+        a.close::after {
+            content: "✕";
+        }
+
+        a.close:hover {
+            background-color: #c41e3a;
+            transform: scale(1.1, 1.1);
+        }
+
+        .main-container {
+            min-height: 100vh;
+            padding: 2rem 0;
+            width: 100%;
+            margin: 0;
+        }
+
+        .container-fluid {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+        }
+
+        #popup {
+            display: none;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showDate = new Date("2024-08-17");
+            const hideDate = new Date("2024-11-10");
+            const currentDate = new Date();
+
+            if (currentDate >= showDate && currentDate <= hideDate) {
+                const popup = document.getElementById("popup");
+                if (popup) popup.style.display = "block";
+            }
+
+            const closeButton = document.getElementById("closeButton");
+            if (closeButton) {
+                closeButton.addEventListener("click", function () {
+                    const popup = document.getElementById("popup");
+                    if (popup) popup.style.display = "none";
+                });
+            }
+
+            // Close lightbox when clicking outside the image
+            document.addEventListener('click', function (e) {
+                if (e.target.matches('[id^="lightbox-"]')) {
+                    window.location.hash = '#gallery';
+                }
+            });
+
+            // Prevent scroll issues with lightbox
+            document.addEventListener('click', function (e) {
+                if (e.target.matches('a[href^="#lightbox-"]')) {
+                    document.body.style.overflow = 'hidden';
+                }
+                if (e.target.matches('a[href="#gallery"]') || e.target.matches('.close')) {
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+
+    <div id="navbar2"></div>
+
+    <main class="main-container col-10">
+        <div class="container-fluid"><img src="../../multimedia/amigos/modelistas/Logo AMBA.webp" alt="Imagen centrada"
+                width="600" style="display: block; margin: 0 auto;"></p>
+
+            <h3>Instalaciones</h3>
+            <p class="col-8">Nuestras actividades se desarrollan en el Museo Histórico del Ejército en Ciudadela.
+                Contamos con
+                espacios exclusivos donde trabajamos en equipo y realizamos exposiciones modelísticas</p>
+            
+            <h3>Equipamiento</h3>
+            <p class="col-8">
+
+                Tenemos armados puestos de trabajo, bien armados, con buena iluminación que son complementados con dos
+                compresores para 16 bocas. Ideal para desarrollar nuestro hobby!</p>
+            <h3>Capacitaciones</h3>
+            <p class="col-8">
+
+                Tenemos el orgullo de tener excelentes docentes, ganadores de concursos, que son los que dictan los
+                diferentes cursos.</p>
+            <h3>Actividades</h3>
+            <p class="col-8">
+
+                Charlas con ex combatientes, preparación de maquetas para nuestras fuerzas armadas, contribución con
+                escuelas primarias/secundarias que promuevan el hobby entre tantas más.</p> <br><br><br><br>
+            <h2>Galería de Modelistas</h2>
+
+            <div id="gallery">
+                <div><img src="../../multimedia/amigos/modelistas/1.webp" alt="Helicóptero"><a
+                        href="#lightbox-1">Helicóptero</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/2.webp" alt="Maqueta Militar"><a
+                        href="#lightbox-2">Maqueta Militar</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/3.webp" alt="Carpa Militar"><a
+                        href="#lightbox-3">Carpa
+                        Militar</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/4.webp" alt="Armamento"><a
+                        href="#lightbox-4">Armamento</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/5.webp" alt="C-130 Hercules"><a
+                        href="#lightbox-5">C-130 Hercules</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/6.webp" alt="Vista General"><a
+                        href="#lightbox-6">Vista
+                        General</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/7.webp" alt="Tanque de Guerra"><a
+                        href="#lightbox-7">Tanque de Guerra</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/8.webp" alt="Vehículo Militar"><a
+                        href="#lightbox-8">Vehículo Militar</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/9.webp" alt="Avión de Combate"><a
+                        href="#lightbox-9">Avión de Combate</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/10.webp" alt="Buque de Guerra"><a
+                        href="#lightbox-10">Buque de Guerra</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/11.webp" alt="Submarino"><a
+                        href="#lightbox-11">Submarino</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/12.webp" alt="Jeep Militar"><a
+                        href="#lightbox-12">Jeep
+                        Militar</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/13.webp" alt="Artillería"><a
+                        href="#lightbox-13">Artillería</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/14.webp" alt="Helicóptero de Transporte"><a
+                        href="#lightbox-14">Helicóptero de Transporte</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/15.webp" alt="Avión Histórico"><a
+                        href="#lightbox-15">Avión Histórico</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/16.webp" alt="Diorama Batalla"><a
+                        href="#lightbox-16">Diorama Batalla</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/17.webp" alt="Camión Militar"><a
+                        href="#lightbox-17">Camión Militar</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/18.webp" alt="Blindado"><a
+                        href="#lightbox-18">Blindado</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/19.webp" alt="Misil"><a href="#lightbox-19">Misil</a>
+                </div>
+                <div><img src="../../multimedia/amigos/modelistas/20.webp" alt="Base Militar"><a
+                        href="#lightbox-20">Base
+                        Militar</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/21.webp" alt="Soldados"><a
+                        href="#lightbox-21">Soldados</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/22.webp" alt="Paracaídas"><a
+                        href="#lightbox-22">Paracaídas</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/23.webp" alt="Radar"><a href="#lightbox-23">Radar</a>
+                </div>
+                <div><img src="../../multimedia/amigos/modelistas/24.webp" alt="Comunicaciones"><a
+                        href="#lightbox-24">Comunicaciones</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/25.webp" alt="Hospital de Campaña"><a
+                        href="#lightbox-25">Hospital de Campaña</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/26.webp" alt="Puente Bailey"><a
+                        href="#lightbox-26">Puente Bailey</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/27.webp" alt="Locomotora Militar"><a
+                        href="#lightbox-27">Locomotora Militar</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/28.webp" alt="Aeródromo"><a
+                        href="#lightbox-28">Aeródromo</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/29.webp" alt="Escena Histórica"><a
+                        href="#lightbox-29">Escena Histórica</a></div>
+                <div><img src="../../multimedia/amigos/modelistas/30.webp" alt="Colección Completa"><a
+                        href="#lightbox-30">Colección Completa</a></div>
+            </div>
+
+            <!-- Lightboxes -->
+            <div class="lightbox" id="lightbox-1">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/1.webp" alt="Helicóptero">
+                    <div class="title">Helicóptero - <b>Modelo detallado de helicóptero militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-2">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/2.webp" alt="Maqueta Militar">
+                    <div class="title">Maqueta Militar - <b>Detallada recreación de equipamiento militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-3">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/3.webp" alt="Carpa Militar">
+                    <div class="title">Carpa Militar - <b>Modelo de carpa de campaña militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-4">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/4.webp" alt="Armamento">
+                    <div class="title">Armamento - <b>Colección de armas militares en miniatura</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-5">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/5.webp" alt="C-130 Hercules">
+                    <div class="title">C-130 Hercules - <b>Avión de transporte militar argentino</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-6">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/6.webp" alt="Vista General">
+                    <div class="title">Vista General - <b>Panorámica de la exposición de modelistas</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-7">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/7.webp" alt="Tanque de Guerra">
+                    <div class="title">Tanque de Guerra - <b>Modelo histórico de tanque militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-8">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/8.webp" alt="Vehículo Militar">
+                    <div class="title">Vehículo Militar - <b>Transporte de tropas en miniatura</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-9">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/9.webp" alt="Avión de Combate">
+                    <div class="title">Avión de Combate - <b>Caza militar argentino</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-10">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/10.webp" alt="Buque de Guerra">
+                    <div class="title">Buque de Guerra - <b>Embarcación de la Armada Argentina</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-11">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/11.webp" alt="Submarino">
+                    <div class="title">Submarino - <b>Modelo submarino militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-12">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/12.webp" alt="Jeep Militar">
+                    <div class="title">Jeep Militar - <b>Vehículo de reconocimiento</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-13">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/13.webp" alt="Artillería">
+                    <div class="title">Artillería - <b>Cañón de artillería histórico</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-14">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/14.webp" alt="Helicóptero de Transporte">
+                    <div class="title">Helicóptero de Transporte - <b>Modelo de helicóptero logístico</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-15">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/15.webp" alt="Avión Histórico">
+                    <div class="title">Avión Histórico - <b>Aeronave de época militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-16">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/16.webp" alt="Diorama Batalla">
+                    <div class="title">Diorama Batalla - <b>Recreación de escena histórica</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-17">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/17.webp" alt="Camión Militar">
+                    <div class="title">Camión Militar - <b>Vehículo de carga del ejército</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-18">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/18.webp" alt="Blindado">
+                    <div class="title">Blindado - <b>Vehículo blindado de combate</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-19">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/19.webp" alt="Misil">
+                    <div class="title">Misil - <b>Sistema de misiles militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-20">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/20.webp" alt="Base Militar">
+                    <div class="title">Base Militar - <b>Modelo de instalación militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-21">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/21.webp" alt="Soldados">
+                    <div class="title">Soldados - <b>Figuras de soldados argentinos</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-22">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/22.webp" alt="Paracaídas">
+                    <div class="title">Paracaídas - <b>Equipo de paracaidismo militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-23">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/23.webp" alt="Radar">
+                    <div class="title">Radar - <b>Sistema de radar militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-24">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/24.webp" alt="Comunicaciones">
+                    <div class="title">Comunicaciones - <b>Equipo de comunicaciones militares</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-25">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/25.webp" alt="Hospital de Campaña">
+                    <div class="title">Hospital de Campaña - <b>Instalación médica militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-26">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/26.webp" alt="Puente Bailey">
+                    <div class="title">Puente Bailey - <b>Puente militar modular</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-27">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/27.webp" alt="Locomotora Militar">
+                    <div class="title">Locomotora Militar - <b>Tren de transporte militar</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-28">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/28.webp" alt="Aeródromo">
+                    <div class="title">Aeródromo - <b>Base aérea militar en miniatura</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-29">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/29.webp" alt="Escena Histórica">
+                    <div class="title">Escena Histórica - <b>Diorama de momento histórico argentino</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-30">
+                <div class="lightbox-content">
+                    <img src="../../multimedia/amigos/modelistas/30.webp" alt="Colección Completa">
+                    <div class="title">Colección Completa - <b>Vista panorámica de toda la exposición</b></div>
+                    <a class="close" href="#gallery"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
