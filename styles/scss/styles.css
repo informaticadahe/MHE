@@ -510,6 +510,10 @@
     overflow-x: hidden !important;
   }
 
+  .navbar-dark .navbar-nav .nav-link {
+    padding-left: 3% !important;
+  }
+
   .slide {
     img {
       min-height: clamp(300px, 60vh, 1000px);
@@ -806,7 +810,8 @@ li {
 /* HISTORIA */
 
 .histórica {
-  list-style: none ;
+  list-style: none;
+
   .textDecoration {
     list-style: none;
     justify-items: center;
