@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <a href="https://x.com/MuseoHistEA"
                                 Target="_blank">
                                 <img src="https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=000000" alt="puntero mapa">
-                                <p>SEGUINOS EN X (ex-twitter) : <b>@museohistoricoargentino</b></p>
+                                <p>SEGUINOS EN X (ex-twitter) : <b>@MuseoHistEA</b></p>
                             </a>
                         </li>
                         <li>
