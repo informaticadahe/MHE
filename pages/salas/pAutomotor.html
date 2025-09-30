@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es" class="hydrated">
+
+<head>
+    <!-- SALA DE ARTILLERÍA, MUSEO DEL EJÉRCITO ARGENTINO -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- TITULO -->
+    <title>Parque Automotor - Museo del Ejército</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles/scss/styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../../multimedia/Logo_Museo-del-ejercito-Argentino.ico">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Exposición de la evolución histórica de la artillería del Ejército Argentino, desde los primeros cañones coloniales hasta los modernos sistemas Krupp">
+    <meta name="keywords"
+        content="Artillería, Cañones, Sistema Krupp, Historia Militar, Ejército Argentino, Parque de Artillería">
+
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+
+    <style>
+        #popup {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .wrapper {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+    </style>
+</head>
+
+<body class="indexBackground" data-new-gr-c-s-check-loaded="14.1226.0" data-gr-ext-installed="">
+
+    <div id="navbar2"></div>
+
+    <main class="col-10">
+        <h1>Vehículos de Transporte y Anfibios del Ejército Argentino</h1>
+
+        <!-- Introducción -->
+        <div class="content-section">
+            <div class="text-content">
+                El Ejército Argentino, a lo largo de su historia, ha utilizado distintos medios de transporte terrestre
+                y anfibio con el objetivo de asegurar la movilidad de tropas, equipos y suministros en todo el
+                territorio nacional y en operaciones en el exterior. Estas capacidades fueron claves tanto en la defensa
+                nacional como en misiones de paz y apoyo a la comunidad.
+
+            </div>
+        </div>
+
+        <!-- Historia de los primeros cañones con carrusel -->
+        <div class="row-content">
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>Primeras Etapas (siglo XIX – primeras décadas del XX)</h2>
+                    <div class="text-content">
+                        Durante el siglo XIX, el transporte militar se realizaba principalmente a través de caballos,
+                        carretas y mulas, fundamentales en las campañas militares de la independencia, las guerras
+                        civiles y la Conquista del Desierto. Recién a comienzos del siglo XX, con la modernización de
+                        las fuerzas armadas, comenzaron a incorporarse vehículos a motor para transporte de personal y
+                        carga, siguiendo la tendencia de los ejércitos europeos.
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-column">
+                <div id="carouselCañones" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselCañones" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/P_automotores/DSC01525.webp" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/P_automotores/DSC01529.webp" class="d-block w-100"
+                                alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/P_automotores/DSC01530.webp" class="d-block w-100"
+                                alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCañones"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipos de artillería -->
+        <div class="content-section">
+            <h2>Modernización y Segunda Guerra Mundial</h2>
+            <div class="text-content">
+                En las décadas de 1930 y 1940 se introdujeron camiones y jeeps de origen estadounidense y alemán, que
+                reemplazaron progresivamente los medios de tracción a sangre. El Jeep Willys MB y camiones como el
+                Chevrolet C-15 fueron de los primeros vehículos de transporte motorizado en gran escala. Estos medios
+                aportaron flexibilidad y rapidez al Ejército, facilitando el despliegue en terrenos diversos.
+
+            </div>
+            <h2>Etapa de industrialización nacional (1950–1970)</h2>
+            <div class="text-content">
+                En la posguerra, la Argentina buscó producir sus propios vehículos militares. En este marco, el Ejército
+                incorporó camiones fabricados por Industrias Aeronáuticas y Mecánicas del Estado (IAME) y más tarde por
+                FIAT y Mercedes-Benz Argentina, destinados al transporte logístico. <br><br>
+
+                En este período también se desarrollaron los primeros proyectos de vehículos anfibios. Se incorporaron
+                algunos ejemplares de DUKW estadounidenses –camiones anfibios de la Segunda Guerra Mundial– utilizados
+                en prácticas de cruce de ríos y en operaciones combinadas con la Infantería de Marina. <br><br>
+
+                <h3><b>Los vehículos blindados y anfibios (década de 1970 en adelante) </b></h3>
+
+                La movilidad de tropas se reforzó con la llegada de vehículos blindados de transporte de personal. Entre
+                los más destacados se encuentran: <br><br>
+
+                M113: de origen estadounidense, un transporte blindado de personal anfibio, ampliamente utilizado por el
+                Ejército desde fines de la década de 1960. Puede operar en ríos y lagunas gracias a su sistema de
+                flotación. <br><br>
+
+                TAM VCTP (Vehículo de Combate Transporte de Personal): versión argentina del Tanque Argentino Mediano,
+                producido localmente desde fines de los años 70. Si bien no es anfibio, fue el núcleo del transporte
+                mecanizado moderno. <br><br>
+
+                Unimog 416 y 431: camiones todoterreno de origen alemán, producidos también en Argentina bajo licencia,
+                que cumplieron funciones de transporte de tropas y cargas pesadas, aptos para terrenos difíciles.
+
+
+            </div>
+        </div>
+
+        <!-- Sistema Krupp con carrusel -->
+        <div class="row-content">
+            <div class="carousel-column">
+                <div id="carouselKrupp" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselKrupp" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../multimedia/salas/P_automotores/DSC01533.webp" class="d-block w-100"
+                                alt="Cañón Sistema Krupp">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/P_automotores/WhatsApp Image 2024-04-18 at 12.30.53 (2).webp"
+                                class="d-block w-100" alt="Mecanismo de Retrocarga">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../multimedia/salas/P_automotores/WhatsApp Image 2024-04-18 at 12.30.53 (3).webp"
+                                class="d-block w-100" alt="Artillería Moderna">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselKrupp"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="text-column">
+                <div class="content-section">
+                    <h2>Conflicto del Atlántico Sur (1982)</h2>
+                    <div class="text-content">
+                        Durante la Guerra de Malvinas, los medios de transporte y anfibios jugaron un papel crucial. El
+                        M113 fue empleado en el teatro de operaciones continental, mientras que en las islas predominó
+                        el uso de camiones y jeeps adaptados al terreno. Los anfibios de gran porte (DUKW y similares)
+                        ya no estaban en servicio, lo que limitó la capacidad logística de cruce en condiciones
+                        marítimas adversas.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Elementos Complementarios -->
+        <div class="content-section">
+            <h2>Período reciente (1990–actualidad)</h2>
+            <div class="text-content">
+                En misiones de paz y despliegues internacionales, el Ejército Argentino ha empleado vehículos de
+                transporte de personal blindados y camiones logísticos modernos, en parte provistos por la ONU o
+                adquiridos en cooperación internacional. <br><br>
+                <b>Entre ellos:</b> <br><br>
+
+                Mowag Grenadier 4x4 (suizo, de transporte blindado ligero). <br><br>
+
+                Camiones Mercedes-Benz Atego y URO VAMTAC (todoterreno de alta movilidad). <br><br>
+
+                Renovación de la flota de M113 modernizados con mejoras en motor, blindaje y sistemas de comunicación.
+                <br><br>
+
+                En cuanto a anfibios, el Ejército mantiene aún unidades de M113 y variantes capaces de operar en agua,
+                complementados con embarcaciones de apoyo para ingenieros y operaciones en ríos. <br><br>
+
+                <b>Importancia actual</b> <br><br>
+
+                Hoy en día, los vehículos de transporte y anfibios constituyen una pieza fundamental en la capacidad
+                operativa del Ejército Argentino. No solo garantizan la movilidad en operaciones militares, sino que
+                también cumplen un rol vital en asistencia humanitaria, evacuaciones, inundaciones y catástrofes
+                naturales, donde el cruce de ríos y terrenos anegados es una tarea frecuente. <br><br>
+            </div>
+        </div>
+
+        <!-- Tarjetas interactivas -->
+        <!-- <h2>Galería Interactiva</h2>
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia")'>
+                        <div class="inner">
+                            <p>Cañones de Bronce</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones de bronce del siglo XIX, utilizados durante las primeras campañas militares
+                                argentinas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Artillería de Campaña</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Piezas móviles y versátiles empleadas en apoyo directo a las tropas en el campo de
+                                batalla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Sistema Krupp</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cañones alemanes de acero con mecanismos de retrocarga que revolucionaron la artillería
+                                argentina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Carros de Transporte</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Vehículos especializados para el traslado de piezas de artillería hasta posiciones
+                                estratégicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpgs")'>
+                        <div class="inner">
+                            <p>Municiones</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Diversos tipos de proyectiles: explosivos, fragmentación, iluminantes y de humo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front"
+                        style='background-image: url("../../multimedia/construccion.jpg")'>
+                        <div class="inner">
+                            <p>Herramientas</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Cajas con instrumentos especializados para mantenimiento, apuntado y carga de las piezas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="barra"></div>
+        <a href="../virtuales/salas.html" class="volver">🡨</a>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
