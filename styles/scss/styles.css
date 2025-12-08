@@ -925,7 +925,6 @@ h5 {
   line-height: 1.8;
   text-align: justify;
   color: #333;
-  margin-bottom: 1.5rem;
 }
 
 .wrapper {
@@ -1000,7 +999,6 @@ h5 {
   backface-visibility: hidden;
   border-radius: 10px;
 }
-
 .container:hover .front,
 .container:hover .back {
   -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -1009,14 +1007,12 @@ h5 {
   transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
-
 .back {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-
 .inner {
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
@@ -1032,41 +1028,35 @@ h5 {
   perspective: inherit;
   z-index: 2;
 }
-
 .container .back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 .container .front {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 .container:hover .back {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 .container:hover .front {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 .front .inner p {
   font-size: 2rem;
   margin-bottom: 2rem;
   position: relative;
 }
-
 .front .inner p:after {
   content: '';
   width: 4rem;
@@ -1116,17 +1106,13 @@ h5 {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-
-
   .row-articulo {
     display: grid;
     grid-template-columns: 0.3fr 0.7fr;
-    /* Imagen 30% | Texto/Carrusel 70% */
     gap: 2rem;
     align-items: center;
     margin-bottom: 2vh;
   }
-
   .row-articulo2 {
     display: grid;
     grid-template-columns: 0.7fr 0.3fr;
@@ -1135,7 +1121,6 @@ h5 {
     align-items: center;
     margin-bottom: 2vh;
   }
-
   /* Imagen */
   .columna img {
     width: 100%;
@@ -1146,11 +1131,9 @@ h5 {
     border-radius: 5%;
     box-shadow: 0px 0px 30px #d86313;
   }
-
   #carouselKrupp {
     margin-top: 0px;
   }
-
   /* Carrusel */
   .carrusel-col .carousel {
     width: 100%;
@@ -1158,7 +1141,6 @@ h5 {
     height: 100%;
     /* igual altura que la imagen */
   }
-
   .carrusel-col .carousel-inner,
   .carrusel-col .carousel-item,
   .carrusel-col .carousel-item img {
@@ -1170,6 +1152,4 @@ h5 {
     border-radius: 5%;
     box-shadow: 0px 0px 30px #d86313;
   }
-
-
 }
